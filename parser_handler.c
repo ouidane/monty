@@ -41,6 +41,7 @@ void parsefile(FILE *file)
 	size_t size = 0;
 	meta_t *meta = NULL;
 	line_t line;
+	arg_t arg = {0, 0};
 
 	meta = malloc(sizeof(meta_t));
 	if (!meta)
@@ -61,7 +62,7 @@ void parsefile(FILE *file)
 		line.number++;
 		parseline(&line, meta->buf);
 		if (line.content)
-			get_op_func(line, meta)(&(meta->stack), line.number);
+			get_op_func(line, meta, arg)(&(meta->stack), line.number);
 	}
 
 	free(meta->buf);

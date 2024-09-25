@@ -61,7 +61,7 @@ bool check_argument(char *token)
   *
   * Return: NAIN.
   */
-void check_push(line_t line, meta_t *meta, char *opcode)
+void check_push(line_t line, meta_t *meta, char *opcode, arg_t *arg)
 {
 	if ((strcmp(opcode, "push") == 0) &&  !check_argument(line.content[1]))
 	{
