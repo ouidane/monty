@@ -1,7 +1,5 @@
 #include "monty.h"
 
-arg_t arg = {0, 0};
-
 /**
   * is_comment - checks if line is a comment.
   * @line - struct containing line content and number.
