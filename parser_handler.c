@@ -36,12 +36,11 @@ void parseline(line_t *line, char *buffer)
   *
   * Return: nothing.
   */
-void parsefile(FILE *file)
+void parsefile(FILE *file, arg_t *arg)
 {
 	size_t size = 0;
 	meta_t *meta = NULL;
 	line_t line;
-	arg_t arg = {0, 0};
 
 	meta = malloc(sizeof(meta_t));
 	if (!meta)

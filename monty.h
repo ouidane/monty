@@ -87,7 +87,7 @@ typedef void (*op_func_t)(stack_t **, unsigned int);
 op_func_t get_op_func(line_t line, meta_t *meta, arg_t *arg);
 
 /* parser_handler.c */
-void parsefile(FILE *file);
+void parsefile(FILE *file, arg_t *arg);
 void parseline(line_t *line, char *buffer);
 
 /* check_handler.c */
