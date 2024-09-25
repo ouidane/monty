@@ -36,7 +36,7 @@ void parseline(line_t *line, char *buffer)
   *
   * Return: nothing.
   */
-void parsefile(FILE *file)
+void parsefile(FILE *file, arg_t *arg)
 {
 	size_t size = 0;
 	meta_t *meta = NULL;
@@ -61,7 +61,7 @@ void parsefile(FILE *file)
 		line.number++;
 		parseline(&line, meta->buf);
 		if (line.content)
-			get_op_func(line, meta)(&(meta->stack), line.number);
+			get_op_func(line, meta, &arg)(&(meta->stack), line.number);
 	}
 
 	free(meta->buf);
