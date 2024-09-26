@@ -25,7 +25,8 @@ void add_op(stack_t **stack, unsigned int nline)
 }
 
 /**
-  * sub_op - Subtracts the top element from the second top element of the stack.
+  * sub_op - Subtracts the top element from the second top element
+  *          of the stack.
   * @stack: Pointer to the head node pointer of the stack.
   * @nline: Line number in the script.
   *
@@ -47,7 +48,6 @@ void sub_op(stack_t **stack, unsigned int nline)
 	(*stack)->prev = NULL;
 	free(temp);
 }
-
 
 /**
   * div_op - Divides the second top element by the top element of the stack.
@@ -79,8 +79,6 @@ void div_op(stack_t **stack, unsigned int nline)
 	free(temp);
 }
 
-
-
 /**
   * mul_op - Multiplies the top two elements of the stack.
   * @stack: Pointer to the head node pointer of the stack.
@@ -105,10 +103,9 @@ void mul_op(stack_t **stack, unsigned int nline)
 	free(temp);
 }
 
-
-
 /**
-  * mod_op - Computes the modulus of the second top element by the top element of the stack.
+  * mod_op - Computes the modulus of the second top element
+  *          by the top element of the stack.
   * @stack: Pointer to the head node pointer of the stack.
   * @nline: Line number in the script.
   *
