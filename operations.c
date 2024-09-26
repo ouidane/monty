@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
-  * add_op - finds sum of top two elements
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * add_op - Adds the top two elements of the stack.
+  * @stack: Pointer to the head node pointer of the stack.
+  * @nline: Line number in the script.
   *
-  * Return: NAIN
+  * Return: None
   */
 void add_op(stack_t **stack, unsigned int nline)
 {
@@ -25,11 +25,11 @@ void add_op(stack_t **stack, unsigned int nline)
 }
 
 /**
-  * sub_op - finds difference in top 2 elements ands stores it in 2nd element.
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * sub_op - Subtracts the top element from the second top element of the stack.
+  * @stack: Pointer to the head node pointer of the stack.
+  * @nline: Line number in the script.
   *
-  * Return: NAIN
+  * Return: None
   */
 void sub_op(stack_t **stack, unsigned int nline)
 {
@@ -50,12 +50,11 @@ void sub_op(stack_t **stack, unsigned int nline)
 
 
 /**
-  * div_op - divides top 2 stack elements
-  * ands stores it in second element
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * div_op - Divides the second top element by the top element of the stack.
+  * @stack: Pointer to the head node pointer of the stack.
+  * @nline: Line number in the script.
   *
-  * Return: NAIN
+  * Return: None
   */
 void div_op(stack_t **stack, unsigned int nline)
 {
@@ -83,11 +82,11 @@ void div_op(stack_t **stack, unsigned int nline)
 
 
 /**
-  * mul_op - multiplies top 2 elements ans stores res in 2nd element.
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * mul_op - Multiplies the top two elements of the stack.
+  * @stack: Pointer to the head node pointer of the stack.
+  * @nline: Line number in the script.
   *
-  * Return: NAIN
+  * Return: None
   */
 void mul_op(stack_t **stack, unsigned int nline)
 {
@@ -109,11 +108,11 @@ void mul_op(stack_t **stack, unsigned int nline)
 
 
 /**
-  * mod_op - finds modulus of top 2 elements and stores it in 2nd element.
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * mod_op - Computes the modulus of the second top element by the top element of the stack.
+  * @stack: Pointer to the head node pointer of the stack.
+  * @nline: Line number in the script.
   *
-  * Return: NAIN
+  * Return: None
   */
 void mod_op(stack_t **stack, unsigned int nline)
 {
