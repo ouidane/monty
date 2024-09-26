@@ -9,12 +9,12 @@
 #include <ctype.h>
 
 /**
-  * struct arg_s - argument representation.
-  * @arg: integer.
-  * @flag: option that corresponds to a specific command.
+  * struct arg_s - Represents an argument.
+  * @arg: Integer value of the argument.
+  * @flag: Option corresponding to a specific command.
   *
-  * Description: structure fr argument parameters
-  * passed to monty.
+  * Description: Structure for argument parameters
+  * passed to the Monty interpreter.
   */
 typedef struct arg_s
 {
@@ -55,10 +55,10 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
-  * struct meta_s - contents of file and buffer data.
-  * @buf: pointer to array of data read from buffer.
-  * @stack: pointer to top of stack.
-  * @file: pointer to file.
+  * struct meta_s - Contains file and buffer data.
+  * @buf: Pointer to the buffer containing data read from the file.
+  * @stack: Pointer to the top of the stack.
+  * @file: Pointer to the file being processed.
   */
 typedef struct meta_s
 {
@@ -68,11 +68,12 @@ typedef struct meta_s
 } meta_t;
 
 /**
-  * line_s - contents of a line and number.
-  * @content: array of tokens read from line.
-  * @number: line number.
+  * struct line_s - Represents the contents of a line and its number.
+  * @content: Array of tokens parsed from the line.
+  * @number: Line number in the source file.
   *
-  * Description: structure for data in a line.
+  * Description: Structure for holding data related to a line
+  * in the input file.
   */
 typedef struct line_s
 {
@@ -80,7 +81,7 @@ typedef struct line_s
 	unsigned int number;
 } line_t;
 
-/* Function pointer type definition */
+/* Function pointer type definition for opcode functions */
 typedef void (*op_func_t)(stack_t **, unsigned int);
 
 /* get_operations.c */
