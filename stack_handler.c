@@ -70,25 +70,22 @@ void rot_left(stack_t **head, __attribute__((unused)) unsigned int counter)
   *
   * Return: NAIN
   */
-void rot_right(stack_t **stack, unsigned int nline)
+void rot_right(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
-	stack_t *temp, *last;
+		stack_t *copy;
 
-	(void)nline;
-	if (!stack || !(*stack) || !((*stack)->next))
-		return;
-
-	temp = *stack;
-	last = temp;
-
-	while (last->next)
+	copy = *head;
+	if (*head == NULL || (*head)->next == NULL)
 	{
-		last = last->next;
+		return;
 	}
-
-	last->prev->next = NULL;
-	last->prev = NULL;
-	temp->prev = last;
-	last->next = temp;
-	*stack = last;
+	while (copy->next)
+	{
+		copy = copy->next;
+	}
+	copy->next = *head;
+	copy->prev->next = NULL;
+	copy->prev = NULL;
+	(*head)->prev = copy;
+	(*head) = copy;
 }
