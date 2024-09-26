@@ -2,11 +2,11 @@
 
 /**
   * get_op_func - searches and matches text to opcode
-  * then returns corresponding function.
-  * @line: struct containing line content and number.
-  * @meta: struct containing all allocated memory.
+  * and returns the corresponding function pointer.
+  * @line: struct containing line content and line number.
+  * @meta: struct containing all allocated memory resources.
   *
-  * Return: pointer to relevant function.
+  * Return: pointer to the relevant function for the opcode.
   */
 void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 {
