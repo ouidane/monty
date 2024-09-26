@@ -11,7 +11,6 @@
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	arg_t arg = {0, 0};
 
 	if (argc != 2)
 	{
@@ -26,6 +25,6 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	parsefile(file, &arg);
+	parsefile(file);
 	return (EXIT_SUCCESS);
 }

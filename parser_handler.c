@@ -33,11 +33,10 @@ void parseline(line_t *line, char *buffer)
 /**
   * parsefile - reads and parses file line by line.
   * @file: script to be read.
-  * @arg: struct containing argument parameters.
   *
   * Return: nothing.
   */
-void parsefile(FILE *file, arg_t *arg)
+void parsefile(FILE *file)
 {
 	size_t size = 0;
 	meta_t *meta = NULL;
@@ -62,7 +61,7 @@ void parsefile(FILE *file, arg_t *arg)
 		line.number++;
 		parseline(&line, meta->buf);
 		if (line.content)
-			get_op_func(line, meta, &arg)(&(meta->stack), line.number);
+			get_op_func(line, meta)(&(meta->stack), line.number);
 	}
 
 	free(meta->buf);

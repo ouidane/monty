@@ -1,5 +1,7 @@
 #include "monty.h"
 
+arg_t arg = {0, 0};
+
 /**
   * is_comment - checks if line is a comment.
   * @line - struct containing line content and number.
@@ -56,11 +58,10 @@ bool check_argument(char *token)
   * @line: struct containg line content and number.
   * @opcode: opcode to compare.
   * @meta: struct containing all alocated memory.
-  * @arg: struct containing argument parameters.
   *
   * Return: NAIN.
   */
-void check_push(line_t line, meta_t *meta, char *opcode, arg_t *arg)
+void check_push(line_t line, meta_t *meta, char *opcode)
 {
 	if ((strcmp(opcode, "push") == 0) &&  !check_argument(line.content[1]))
 	{

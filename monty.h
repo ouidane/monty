@@ -84,15 +84,15 @@ typedef struct line_s
 typedef void (*op_func_t)(stack_t **, unsigned int);
 
 /* get_operations.c */
-op_func_t get_op_func(line_t line, meta_t *meta, arg_t *arg);
+op_func_t get_op_func(line_t line, meta_t *meta);
 
 /* parser_handler.c */
-void parsefile(FILE *file, arg_t *arg);
+void parsefile(FILE *file);
 void parseline(line_t *line, char *buffer);
 
 /* check_handler.c */
 bool is_comment(line_t line);
-void check_push(line_t line, meta_t *meta, char *opcode, arg_t *arg);
+void check_push(line_t line, meta_t *meta, char *opcode);
 bool check_argument(char *token);
 int is_alpha(int c);
 

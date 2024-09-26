@@ -5,11 +5,10 @@
   * then returns corresponding function.
   * @line: struct containing line content and number.
   * @meta: struct containing all allocated memory.
-  * @arg: struct containing argument parameters.
   *
   * Return: pointer to relevant function.
   */
-void (*get_op_func(line_t line, meta_t *meta, arg_t *arg))(stack_t **, unsigned int)
+void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 {
 	unsigned int i = 0;
 	instruction_t ops[] = {
@@ -40,7 +39,7 @@ void (*get_op_func(line_t line, meta_t *meta, arg_t *arg))(stack_t **, unsigned 
 	{
 		if (strcmp(ops[i].opcode, line.content[0]) == 0)
 		{
-			check_push(line, meta, ops[i].opcode, arg);
+			check_push(line, meta, ops[i].opcode);
 			if (arg.flag == 1 && strcmp(ops[i].opcode, "push") == 0)
 			{
 				if (line.content)
