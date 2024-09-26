@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
-  * parseline - parses then tokenizes a line of text storing
-  * it in a line struct.
-  * @line: struct containing content and line number.
-  * @buffer: string of text read from script file.
+  * parseline - Parses and tokenizes a line of text, storing
+  * the tokens in a line struct.
+  * @line: Pointer to the struct containing content and line number.
+  * @buffer: String of text read from the script file.
   *
-  * Return: nothing
+  * Return: Nothing.
   */
 void parseline(line_t *line, char *buffer)
 {
@@ -31,10 +31,10 @@ void parseline(line_t *line, char *buffer)
 }
 
 /**
-  * parsefile - reads and parses file line by line.
-  * @file: script to be read.
+  * parsefile - Reads and parses a file line by line.
+  * @file: Pointer to the script file to be read.
   *
-  * Return: nothing.
+  * Return: Nothing.
   */
 void parsefile(FILE *file)
 {

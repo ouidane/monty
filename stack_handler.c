@@ -2,10 +2,10 @@
 
 /**
   * add_stack - changes mode of push to stack.
-  * @stack: pointer to stack.
+  * @stack: pointer to the stack.
   * @nline: line number.
   *
-  * Return: NAIN!!
+  * Return: void
   */
 void add_stack(stack_t **stack, unsigned int nline)
 {
@@ -17,9 +17,9 @@ void add_stack(stack_t **stack, unsigned int nline)
 
 /**
   * free_stack - frees all nodes in a stack.
-  * @stack: pointer to head node pointer of a stack.
+  * @stack: pointer to the head node pointer of the stack.
   *
-  * Return: NAIN
+  * Return: void
   */
 void free_stack(stack_t **stack)
 {
@@ -37,11 +37,11 @@ void free_stack(stack_t **stack)
 }
 
 /**
-  * rot_left - rotates stack to the left
-  * @stack: pointer to the head node pointer of stack
+  * rot_left - rotates the stack to the left.
+  * @head: pointer to the head node pointer of the stack.
+  * @counter: line number.
   *
-  * @nline: line number
-  * Return: NAIN
+  * Return: void
   */
 void rot_left(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
@@ -64,11 +64,11 @@ void rot_left(stack_t **head, __attribute__((unused)) unsigned int counter)
 }
 
 /**
-  * rot_right - rotates stack to the right.
-  * @stack: pointer to the head node pointer of stack
-  * @nline: line number
+  * rot_right - rotates the stack to the right.
+  * @head: pointer to the head node pointer of the stack.
+  * @counter: line number.
   *
-  * Return: NAIN
+  * Return: void
   */
 void rot_right(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
