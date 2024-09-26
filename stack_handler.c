@@ -72,7 +72,7 @@ void rot_left(stack_t **head, __attribute__((unused)) unsigned int counter)
   */
 void rot_right(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
-		stack_t *copy;
+	stack_t *copy;
 
 	copy = *head;
 	if (*head == NULL || (*head)->next == NULL)
