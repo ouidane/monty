@@ -38,7 +38,6 @@ void sub_op(stack_t **stack, unsigned int nline)
 	if (!(stack) || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", nline);
-		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 
