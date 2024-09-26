@@ -68,7 +68,7 @@ typedef struct meta_s
 } meta_t;
 
 /**
-  * struct line - contents of a line and number.
+  * line_s - contents of a line and number.
   * @content: array of tokens read from line.
   * @number: line number.
   *
