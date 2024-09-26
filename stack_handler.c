@@ -43,27 +43,24 @@ void free_stack(stack_t **stack)
   * @nline: line number
   * Return: NAIN
   */
-void rot_left(stack_t **stack, unsigned int nline)
+void rot_left(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
-	stack_t *temp, *last;
+	stack_t *tmp = *head, *aux;
 
-	(void)nline;
-	if (!stack || !(*stack) || !((*stack)->next))
-		return;
-
-	temp = *stack;
-	last = temp;
-
-	while (last->next)
+	if (*head == NULL || (*head)->next == NULL)
 	{
-		last = last->next;
+		return;
 	}
-
-	last->next = temp;
-	temp->prev = last;
-	temp->next->prev = NULL;
-	*stack = temp->next;
-	temp->next = NULL;
+	aux = (*head)->next;
+	aux->prev = NULL;
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+	tmp->next = *head;
+	(*head)->next = NULL;
+	(*head)->prev = tmp;
+	(*head) = aux;
 }
 
 /**
