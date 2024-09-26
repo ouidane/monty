@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
-  * push - pushes node to top of stack.
-  * @stack: pointer to head node pointer of stack
-  * @nline: line number.
+  * push - pushes a node to the top of the stack.
+  * @stack: pointer to the head node pointer of the stack.
+  * @nline: line number of the command.
   *
-  * Return: NAIN.
+  * Return: nothing.
   */
 void push(stack_t **stack, unsigned int nline)
 {
@@ -34,9 +34,9 @@ void push(stack_t **stack, unsigned int nline)
 }
 
 /**
-  * pall - prints data of all nodes in stack.
-  * @stack: pointer to head node pointer of stack.
-  * @nline: line number.
+  * pall - prints the data of all nodes in the stack.
+  * @stack: pointer to the head node pointer of the stack.
+  * @nline: line number of the command.
   *
   * Return: nothing.
   */
@@ -54,11 +54,11 @@ void pall(stack_t **stack, unsigned int nline)
 }
 
 /**
-  * nop - does NAIN.
-  * @stack: pointer to head node pointer of stack.
-  * @nline: line number.
+  * nop - does nothing.
+  * @stack: pointer to the head node pointer of the stack.
+  * @nline: line number of the command.
   *
-  * Return: NAIN.
+  * Return: nothing.
   */
 void nop(stack_t **stack, unsigned int nline)
 {
