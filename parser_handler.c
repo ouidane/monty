@@ -33,6 +33,7 @@ void parseline(line_t *line, char *buffer)
 /**
   * parsefile - reads and parses file line by line.
   * @file: script to be read.
+  * @arg: struct containing argument parameters.
   *
   * Return: nothing.
   */

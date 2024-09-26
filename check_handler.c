@@ -56,6 +56,7 @@ bool check_argument(char *token)
   * @line: struct containg line content and number.
   * @opcode: opcode to compare.
   * @meta: struct containing all alocated memory.
+  * @arg: struct containing argument parameters.
   *
   * Return: NAIN.
   */
