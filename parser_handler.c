@@ -13,8 +13,8 @@ void parseline(line_t *line, char *buffer)
 	unsigned int i;
 	char *token = NULL;
 
-	line->content = malloc(sizeof(char *) * 3);
-	if (!line->content)
+	line->tokens = malloc(sizeof(char *) * 3);
+	if (!line->tokens)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
@@ -23,11 +23,11 @@ void parseline(line_t *line, char *buffer)
 	token = strtok(buffer, " '\n'");
 	for (i = 0; token && i < 2; i++)
 	{
-		line->content[i] = token;
+		line->tokens[i] = token;
 		token = strtok(NULL, " \n");
 	}
 
-	line->content[i] = NULL;
+	line->tokens[i] = NULL;
 }
 
 /**
@@ -49,8 +49,8 @@ void parsefile(FILE *file)
 		exit(EXIT_FAILURE);
 	}
 
-	line.number = 0;
-	line.content = NULL;
+	line.num = 0;
+	line.tokens = NULL;
 
 	meta->file = file;
 	meta->stack = NULL;
@@ -58,10 +58,10 @@ void parsefile(FILE *file)
 
 	while (getline(&(meta->buf), &size, meta->file) != -1)
 	{
-		line.number++;
+		line.num++;
 		parseline(&line, meta->buf);
-		if (line.content)
-			get_op_func(line, meta)(&(meta->stack), line.number);
+		if (line.tokens)
+			get_op_func(line, meta)(&(meta->stack), line.num);
 	}
 
 	free(meta->buf);

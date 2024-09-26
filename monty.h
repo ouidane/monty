@@ -69,16 +69,16 @@ typedef struct meta_s
 
 /**
   * struct line_s - Represents the contents of a line and its number.
-  * @content: Array of tokens parsed from the line.
-  * @number: Line number in the source file.
+  * @tokens: Array of tokens parsed from the line.
+  * @num: Line number in the source file.
   *
   * Description: Structure for holding data related to a line
   * in the input file.
   */
 typedef struct line_s
 {
-	char **content;
-	unsigned int number;
+	char **tokens;
+	unsigned int num;
 } line_t;
 
 /* Function pointer type definition for opcode functions */

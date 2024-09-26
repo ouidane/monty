@@ -10,15 +10,15 @@ arg_t arg = {0, 0};
   */
 bool is_comment(line_t line)
 {
-	if (!line.content[0])
+	if (!line.tokens[0])
 	{
-		free(line.content);
+		free(line.tokens);
 		return (true);
 	}
 
-	if (line.content[0][0] == '#')
+	if (line.tokens[0][0] == '#')
 	{
-		free(line.content);
+		free(line.tokens);
 		return (true);
 	}
 
@@ -63,10 +63,10 @@ bool check_argument(char *token)
   */
 void check_push(line_t line, meta_t *meta, char *opcode)
 {
-	if ((strcmp(opcode, "push") == 0) &&  !check_argument(line.content[1]))
+	if ((strcmp(opcode, "push") == 0) &&  !check_argument(line.tokens[1]))
 	{
-		free(line.content);
-		fprintf(stderr, "L%d: usage: push integer\n", line.number);
+		free(line.tokens);
+		fprintf(stderr, "L%d: usage: push integer\n", line.num);
 		free(meta->buf);
 		free_stack(&(meta->stack));
 		fclose(meta->file);
@@ -74,7 +74,7 @@ void check_push(line_t line, meta_t *meta, char *opcode)
 		exit(EXIT_FAILURE);
 	}
 	else if (strcmp(opcode, "push") == 0)
-		arg.arg = atoi(line.content[1]);
+		arg.arg = atoi(line.tokens[1]);
 }
 
 /**
